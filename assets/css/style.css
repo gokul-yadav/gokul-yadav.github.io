@@ -476,10 +476,12 @@ main {
 }
 
 .navbar-link {
-  color: var(--light-gray);
-  font-size: var(--fs-6);
-  padding: 20px 7px;
-  transition: color var(--transition-1);
+  font-weight: bold; /* Making the font bold */
+  background: black; /* Setting the background color to black */
+  color: var(--light-gray); /* Setting the font color */
+  font-size: var(--fs-6); /* Setting the font size */
+  padding: 20px 7px; /* Padding */
+  transition: color var(--transition-1); /* Transition effect */
 }
 
 .navbar-link:hover,
@@ -488,11 +490,6 @@ main {
 .navbar-link.active { color: var(--orange-yellow-crayola); }
 
 
-
-.navbar-link {
-  font-size: calc(var(--fs-6) * 1.5); /* Increase the font size by 50% */
-  /* Other existing styles */
-}
 
 
 /*-----------------------------------*\
