@@ -477,7 +477,7 @@ main {
 
 .navbar-link {
   color: var(--light-gray);
-  font-size: var(--fs-8);
+  font-size: var(--fs-5);
   padding: 20px 7px;
   transition: color var(--transition-1);
 }
@@ -490,7 +490,7 @@ main {
 
 
 .navbar-link {
-  font-size: calc(var(--fs-8) * 1.5); /* Increase the font size by 50% */
+  font-size: calc(var(--fs-4) * 1.5); /* Increase the font size by 50% */
   /* Other existing styles */
 }
 
