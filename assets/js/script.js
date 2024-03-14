@@ -134,26 +134,40 @@ for (let i = 0; i < formInputs.length; i++) {
   });
 }
 
-
-
-// page navigation variables
+// Page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav link
+// Loop through each navigation link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
+    const currentPageName = this.innerHTML.toLowerCase();
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
+    // Loop through each page
+    for (let j = 0; j < pages.length; j++) {
+      const pageName = pages[j].dataset.page.toLowerCase();
+      
+      // Check if the current navigation link corresponds to the current page
+      if (currentPageName === pageName) {
+        // Add the 'active' class to the current page and navigation link
+        pages[j].classList.add("active");
+        navigationLinks[j].classList.add("active");
         window.scrollTo(0, 0);
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        // Remove the 'active' class from other pages and navigation links
+        pages[j].classList.remove("active");
+        navigationLinks[j].classList.remove("active");
       }
     }
-
   });
+}
+
+// Set the default page to "Notes"
+const defaultPageName = "Notes".toLowerCase();
+for (let i = 0; i < pages.length; i++) {
+  const pageName = pages[i].dataset.page.toLowerCase();
+  if (pageName === defaultPageName) {
+    pages[i].classList.add("active");
+    navigationLinks[i].classList.add("active");
+  }
 }
