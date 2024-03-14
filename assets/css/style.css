@@ -484,10 +484,10 @@ main {
   transition: color var(--transition-1); /* Transition effect */
 }
 
-.navbar-link:hover,
+.navbar-link:hover{ color: var(--orange-yellow-crayola); }
 .navbar-link:focus { color: var(--light-gray-70); }
 
-.navbar-link.active { color: var(--orange-yellow-crayola); }
+
 
 
 
@@ -1037,6 +1037,9 @@ main {
 }
 
 
+[data-page="notes"] {
+  margin-bottom: 30px; /* Adjust the margin as needed */
+}
 
 
 
